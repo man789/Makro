@@ -1,0 +1,241 @@
+// about
+.about{
+  margin-top: -5%;
+  position: relative;
+  z-index: 5;
+  @media screen and (max-width: 700px) {
+    padding: 0 5%;
+  }
+}
+.about__content{
+  display: flex;
+  @media screen and (max-width: 700px) {
+    flex-direction: column;
+  }
+  &__img{
+    width: 50%;
+    background: url('../img/fruit.png') center/cover;
+    border-top-left-radius: 8px;
+    border-bottom-left-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    @media screen and (max-width: 700px) {
+      width: 100%;
+      height: 300px;
+      border-bottom-left-radius: 0;
+      border-top-left-radius: 8px;
+      border-top-right-radius: 8px;
+    }
+  }
+  &__txt{
+    width: 50%;
+    background-color: $white;
+    color: $blue;
+    padding: 5%  8%;
+    border-top-right-radius: 8px;
+    border-bottom-right-radius: 8px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    @media screen and (max-width: 700px) {
+      width: 100%;
+      border-top-right-radius: 0;
+      border-bottom-left-radius: 8px;
+      border-bottom-right-radius: 8px;
+    }
+    h2{
+      font-size: 2.5rem;
+      font-weight: 700;
+    }
+    p{
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.4rem;
+    }
+  }
+}
+// cta
+.cta{
+  display: grid;
+  grid-template-areas: 
+  "cta1 cta2 cta3"
+  "cta4 cta5 cta6"
+  ;
+  gap: 2rem;
+  justify-content: center;
+  padding: 5% 0;
+  @media screen and (max-width: 700px) {
+    gap: 1rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__box{
+    background-color: $white;
+    color: $blue;
+    width: 360px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 5% 20%;
+    height: 100px;
+    border-radius: 8px;
+    
+    cursor: pointer;
+    transition: .3s all ease-in-out;
+    &:hover{
+      color: $red;box-shadow: rgba(0, 0, 0, 0.30) 0px 5px 15px;
+    }
+    @media screen and (max-width: 700px){
+      padding: 5%;
+    }
+    i{
+      margin-right: 15px;
+    }
+    p{
+      font-weight: 600;
+      font-size: 1rem;
+    }
+  }
+  &__box:nth-of-type(1){
+    grid-area: cta1;
+  }
+  &__box:nth-of-type(2){
+    grid-area: cta2;
+  }
+  &__box:nth-of-type(3){
+    grid-area: cta3;
+  }
+  &__box:nth-of-type(4){
+    grid-area: cta4;
+  }
+  &__box:nth-of-type(5){
+    grid-area: cta5;
+  }
+  &__box:nth-of-type(6){
+    grid-area: cta6;
+  }
+}
+// promo
+.promo{
+  background-color: #F6F6F6;
+  padding: 5% 0;
+  color: $blue;
+  &__header{
+    @media screen and (max-width: 700px){
+      padding: 0 5%;
+    }
+    h2{
+      font-size: 2.5rem;
+      font-weight: 700;
+      display: block;
+      width: 60%;
+      @media screen and (max-width: 700px){
+        width: 100%;
+        text-align: center;
+      }
+    }
+    p{
+      font-size: 0.9rem;
+      font-weight: 300;
+      line-height: 1.4rem;
+      display: block;
+      width: 60%;
+      @media screen and (max-width: 700px){
+        width: 100%;
+        text-align: center;
+      }
+    }
+  }
+}
+.promo__link{
+  color: inherit;
+  text-decoration: underline;
+  font-weight: 600;
+  transition: .3s all ease-in-out;
+  &:hover{
+    color: $red;
+  }
+}
+.promo__cards{
+  display: flex;
+  justify-content: space-between;
+  margin-top: 5%;
+  @media screen and (max-width: 700px){
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+  }
+}
+.promo__card{
+  position: relative;
+  width: 360px;
+  background-color: $white;
+  padding: 3%;
+  border-radius: 8px;
+  transition: .3s all ease-in-out;
+  cursor: pointer;
+  &:hover{
+    box-shadow: rgba(0, 0, 0, 0.16) 0px 10px 36px 0px, rgba(0, 0, 0, 0.06) 0px 0px 0px 1px;
+  }
+  &:hover h3{
+    color: $red;
+  }
+  h3{
+    font-size: 1.7rem;
+    margin-bottom: 0;
+  }
+  p{
+    font-size: 0.8rem;
+    margin-bottom: 8%;
+  }
+  >div:nth-of-type(1){
+    height: 250px;
+  }
+  >div:nth-of-type(4){
+    a{
+      color: $white;
+      background-color: $red;
+      margin: 5% auto;
+      display: block;
+      width: fit-content;
+      padding: 8px 12px;
+      border-radius: 8px;
+      border: 1px solid $red;
+      transition: .3s all ease-in-out;
+      &:hover{
+        background-color: transparent;
+        color: $red;
+      }
+    }
+  }
+}
+.promo__hr{
+  height: 1px;
+  width: 100%;
+  border: none;
+  background-color: $grey;
+}
+.promo__price{
+  color: $red;
+  font-weight: 600;
+  font-size: 2rem;
+  display: block;
+  margin-top: 8%;
+  &--cut{
+    text-decoration: line-through;
+    font-weight: 300;
+    font-size: 0.9rem;
+  }
+}
+.btn__promo{
+  position: absolute;
+  top: 25px;
+  right: -10px;
+  color: $white;
+  font-weight: 600;
+  font-size: 0.9rem;
+  display: block;
+  background-color: $red;
+  padding: 6px 6px;
+  border-radius: 6px;
+}

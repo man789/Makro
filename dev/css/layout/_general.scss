@@ -1,0 +1,17 @@
+body{
+  background-color: $yellow;
+  font-family: $font-txt;
+  position: relative;
+}
+a{
+  text-decoration: none;
+  color: $white;
+}
+.wrapper{
+  max-width: 1200px;
+  width: 100%;
+  margin: 0 auto;
+}
+.bold{
+  font-weight: 600;
+}

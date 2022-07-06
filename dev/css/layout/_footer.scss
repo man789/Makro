@@ -1,0 +1,121 @@
+.footer{
+  background-color: $blue;
+  display: flex;
+  flex-direction: column;
+  color: $yellow;
+  &__news{
+    border-bottom: 5px solid #F6F6F6;
+    .wrapper{
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      @media screen and (max-width: 700px){
+        padding: 5%;
+        flex-direction: column;
+      }
+    }
+  }
+}
+.footer__news--left{
+  font-size: 2rem;
+  width: 50%;
+  font-weight: 600;
+  @media screen and (max-width: 700px){
+    font-size: 1.5rem;
+    text-align: center;
+    width: 100%;
+  }
+}
+.footer__news--right{
+  font-size: 1rem;
+  width: 50%;
+  font-weight: 600;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  @media screen and (max-width: 700px){
+    width: 100%;
+    justify-content: center;
+  }
+  >div:nth-of-type(1){
+    border: 1px solid $yellow;
+    width: fit-content;
+    display: flex;
+    align-items: center;
+    border-radius: 5px;
+    overflow: hidden;
+    transition: .3s all ease-in-out;
+    &:hover{
+      color: $red;
+      border: 1px solid $red;
+    }
+    &:hover a{
+      color: $red;
+    }
+    &:hover i{
+      color: $red;
+    }
+    a{
+      display: block;
+      padding: 8px;
+      border-right: 1px solid $yellow;
+      color: $yellow;
+      transition: .3s all ease-in-out;
+    }
+    i{
+      margin: 0 10px;
+      color: $blue;
+      transition: .3s all ease-in-out;
+    }
+    div{
+      background-color: $yellow;
+    }
+  }
+}
+.footer__legals{
+  background: url('../img/footer.png') center/cover;
+  height: 200px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  .wrapper{
+    display: flex;
+    @media screen and (max-width: 700px){
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap: 2rem;
+    }
+    div{
+      width: 50%;
+      text-align: center;
+      text-transform: uppercase;
+      @media screen and (max-width: 700px){
+        width: 100%;
+      }
+      i{
+        margin-left: 10px;
+      }
+    }
+    >div:nth-of-type(1){
+      transition: .3s all ease-in-out;
+      color: $white;
+      &:hover{
+        color: $red;
+      }
+      a{
+        color: inherit;
+      }
+    }
+    >div:nth-of-type(2){
+      color: $yellow;
+      transition: .3s all ease-in-out;
+      &:hover{
+        color: $red;
+      }
+      a{
+        color: inherit;
+      }
+    }
+  }
+}

@@ -1,0 +1,24 @@
+.btn__yellow{
+  background-color: $yellow;
+  color: $blue;
+  border-radius: 8px;
+  border: 1px solid $yellow;
+  padding: 10px 15px;
+  transition: .3s all ease-in-out;
+  &:hover{
+    background-color: transparent;
+    color: $yellow;
+  }
+}
+.btn__blue{
+  background-color: $blue;
+  color: $yellow;
+  border-radius: 8px;
+  border: 1px solid $yellow;
+  padding: 10px 15px;
+  transition: .3s all ease-in-out;
+  &:hover{
+    background-color: $yellow;
+    color: $blue;
+  }
+}
