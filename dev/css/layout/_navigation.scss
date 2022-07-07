@@ -1,10 +1,15 @@
 .main__nav{
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: 7;
   display: flex;
   align-items: center;
   background-color: $blue;
   border-bottom: 1px solid rgba(0, 0, 139, 0.513);
   padding: 0 3%;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 900px) {
     padding: 8px;
   }
   &__logo{
@@ -19,7 +24,7 @@
   &__links{
     display: flex;
     align-items: center;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 900px) {
       display: none;
     }
     a{
@@ -47,7 +52,7 @@
     justify-content: space-evenly;
     width: 25px;
     height: 25px;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 900px) {
       display: flex;
     }
     cursor: pointer;
@@ -77,4 +82,7 @@
 }
 .active{
 display: flex;
+}
+.not-active{
+  display: none;
 }

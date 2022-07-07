@@ -5,7 +5,7 @@ let navLinks = document.querySelector('.main__nav__links');
 
 
 function hasClick(){
-  navLinks.classList.toggle("active");
+  navLinks.classList.toggle("not-active");
   menu.classList.toggle("active");
 }
 burger.addEventListener("click", hasClick);

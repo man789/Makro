@@ -3,13 +3,13 @@
   margin-top: -5%;
   position: relative;
   z-index: 5;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 900px) {
     padding: 0 5%;
   }
 }
 .about__content{
   display: flex;
-  @media screen and (max-width: 700px) {
+  @media screen and (max-width: 900px) {
     flex-direction: column;
   }
   &__img{
@@ -18,7 +18,7 @@
     border-top-left-radius: 8px;
     border-bottom-left-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 900px) {
       width: 100%;
       height: 300px;
       border-bottom-left-radius: 0;
@@ -34,7 +34,7 @@
     border-top-right-radius: 8px;
     border-bottom-right-radius: 8px;
     box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
-    @media screen and (max-width: 700px) {
+    @media screen and (max-width: 900px) {
       width: 100%;
       border-top-right-radius: 0;
       border-bottom-left-radius: 8px;
@@ -68,10 +68,17 @@
     justify-content: center;
     align-items: center;
   }
+  @media screen and (max-width: 1100px) {
+    grid-template-areas:
+      "cta1 cta2"
+      "cta3 cta4"
+      "cta5 cta6"
+    ;
+  }
   &__box{
     background-color: $white;
     color: $blue;
-    width: 360px;
+    width: 350px;
     display: flex;
     justify-content: flex-start;
     align-items: center;
@@ -84,7 +91,7 @@
     &:hover{
       color: $red;box-shadow: rgba(0, 0, 0, 0.30) 0px 5px 15px;
     }
-    @media screen and (max-width: 700px){
+    @media screen and (max-width: 900px){
       padding: 5%;
     }
     i{
@@ -120,7 +127,7 @@
   padding: 5% 0;
   color: $blue;
   &__header{
-    @media screen and (max-width: 700px){
+    @media screen and (max-width: 900px){
       padding: 0 5%;
     }
     h2{
@@ -128,7 +135,7 @@
       font-weight: 700;
       display: block;
       width: 60%;
-      @media screen and (max-width: 700px){
+      @media screen and (max-width: 900px){
         width: 100%;
         text-align: center;
       }
@@ -139,7 +146,7 @@
       line-height: 1.4rem;
       display: block;
       width: 60%;
-      @media screen and (max-width: 700px){
+      @media screen and (max-width: 900px){
         width: 100%;
         text-align: center;
       }
@@ -157,9 +164,9 @@
 }
 .promo__cards{
   display: flex;
-  justify-content: space-between;
+  justify-content: space-evenly;
   margin-top: 5%;
-  @media screen and (max-width: 700px){
+  @media screen and (max-width: 900px){
     flex-direction: column;
     justify-content: center;
     align-items: center;
@@ -168,7 +175,7 @@
 }
 .promo__card{
   position: relative;
-  width: 360px;
+  width: 340px;
   background-color: $white;
   padding: 3%;
   border-radius: 8px;
